@@ -1,0 +1,31 @@
+This projects provides a glue to produce HTML Slidy based presentations from Org-Mode files.
+
+INSTALL:
+- copy org-htmlslidy.el somewhere in your Emacs' load-path
+
+- (require 'org-htmlslidy) from your .emacs
+
+- copy provided Org files into your sources directory
+
+  $ cp htmlslidy.org  $ORG_SRC
+
+- This archive contains slidy.js and slidy.css that was retrieved on Friday 2010-11-12 from:
+     http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js
+     http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css
+
+  Copy these files to your HTML export directory.
+  Note: that export directory depends entirely on your Org setup. You might
+  want to configure it using the `org-publish' feature. See
+  http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.php
+  for details.
+
+- copy jquery.js and org-slides.js (from this project) at the right place
+
+  $ cp jquery.js org-slidy-slides.js $ORG_HTML_EXPORT
+
+Now you're ready to export an Org file as a HTML presentation. This will be
+automatically achieved through regular HTML export, provided that your Org file
+contains the "magic" line:
+
+#+SETUPFILE: htmlslidy.org
+

@@ -29,3 +29,15 @@ contains the "magic" line:
 
 #+SETUPFILE: htmlslidy.org
 
+Note that the resulting output may be heavily modified by supplying
+additional css setup. E.g. the following header to an org file may be
+used to choose the color and icons used on the W3C pages (you have to
+download them locally as well).
+
+#+STYLE: <link rel='stylesheet' href='blue.css' type='text/css'  /> <link rel='stylesheet' href='dov.css' type='text/css'  />
+#+BIND: org-htmlslidy-html-preamble-footer "<h1>A perl test</h1>"
+#+BIND: org-export-html-preamble "<div class='background slanty'><img src='graphics/w3c-logo-slanted.jpg' alt='slanted W3C logo' /></div><div class='background'><img alt='' id='head-icon' src='graphics/icon-blue.png' /></a></object></div>"
+
+Thanks a lot to the author of org-s5, Yann Hodique! org-htmlslidy is
+just a slight modification of his module.
+

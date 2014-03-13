@@ -1,0 +1,57 @@
+#+SETUPFILE: htmlslidy.org
+
+* First slide
+** Here is some python code
+#+BEGIN_SRC python :exports both :results output
+class Counter:
+    def __init__(self, low, high):
+        self.current = low
+        self.high = high
+
+    def __iter__(self):
+        return self
+
+    def next(self):
+        if self.current > self.high:
+            raise StopIteration
+        else:
+            self.current += 1
+            return self.current - 1
+
+for c in Counter(0,10):
+    print c
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+#+end_example
+
+* Second slide.
+** Here is some math
+Maxwell's equations:
+\begin{align}
+        B'&=-\nabla \times E,\\
+        E'&=\nabla \times B - 4\pi j,
+\end{align}
+Continuous fractions:
+\begin{equation}
+  x = a_0 + \frac{1}{\displaystyle a_1
+          + \frac{1}{\displaystyle a_2
+          + \frac{1}{\displaystyle a_3 + a_4}}}
+\end{equation}
+* Done
+** Credits
+   - org-slidy by Dov Grobgeld
+   - html-slidy by Dave Raggett <dsr@w3.org>
+   - org-s5 by Yann Hodique

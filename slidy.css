@@ -133,6 +133,10 @@ div.slide h1 {
   background: transparent;
 }
 
+div.content h1 {
+visibility: hidden;
+}
+
 div.toc {
   position: absolute;
   top: auto;

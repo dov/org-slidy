@@ -1,3 +1,6 @@
+Note: This project is probably superseeded by ox-slidy.py by Rick Frankel. See: 
+http://lists.gnu.org/archive/html/emacs-orgmode/2013-10/msg00781.html
+
 This projects provides a glue to produce HTML Slidy based presentations from Org-Mode files.
 
 INSTALL:

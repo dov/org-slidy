@@ -37,13 +37,12 @@
             (and (stringp v) v)))
    ""))
 
-(defun org-htmlslidy-html-preamble-function (&rest ignore)
-  (insert (format "<div class='slide cover title'>
-<h1>%s</h1><h3>%s</h3></div>"
-                  title author)))
+(defun org-htmlslidy-html-preamble-function (property-list &rest ignore)
+  (format "<div class=\"slide cover title\">
+<h1>%s</h1><h3>%s &lt;%s&gt;></h3></div>" (plist-get property-list :title) (plist-get property-list :author) (plist-get property-list :email)))
 
-(defun org-htmlslidy-html-postamble-function (&rest ignore)
-  (insert ""))
+(defun org-htmlslidy-html-postamble-function (property-list &rest ignore)
+  "")
 
 (provide 'org-htmlslidy)
 ;;; org-htmlslidy.el ends here
